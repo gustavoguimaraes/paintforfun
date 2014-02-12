@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='/socket.io/socket.io.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        script(src='/javascripts/lib/zepto.js')
+        script(src='/javascripts/lib/paper.js')
+        script(src='/javascripts/canvas.js', type="text/paperscript", canvas="myCanvas")
+        
+  body(id="theImage")
+    div(class="controls")
+        div(id="userCountWrapper", style="opacity:0;")
+            span(id="userCount")
+        div(data-color="0,0,0", class="color", style="background:rgb(0,0,0);")
+        div(data-color="109,73,37", class="color active", style="background:rgb(109,73,37);")
+        div(data-color="233,34,41", class="color", style="background:rgb(233,34,41);")
+        div(data-color="57,178,73", class="color", style="background:rgb(57,178,73);")
+        br
+        br
+        label Opacity
+            input(type="range", min="0", max="255", value="200", id="opacity")
+        br
+        br    
+        div(data-color="247,219,31", class="color", style="background:rgb(247,219,31);")
+        div(data-color="248,172,60", class="color", style="background:rgb(248,172,60);")
+        div(data-color="142,42,140", class="color", style="background:rgb(142,42,140);")
+        div(data-color="77,42,255", class="color", style="background:rgb(77,42,255);")
+    a(id="showMona")
+        t Mona Lisa
+    a(id="showSeiya")
+        t Santa Claus
+    a(id="showDino")
+        t Dino
+
+        
+canvas(id="myCanvas", resize="true")
